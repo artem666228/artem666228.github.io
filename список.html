@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>список дел</title>
+    <style>
+        .header {
+            font-size: 55px;
+            text-align: center;
+            color: red;
+        }
+
+        input[type="button"] {
+            background-color: green;
+            font-size: 25px;
+        }
+
+        .headef {
+            font-size: 25px;
+        }
+    </style>
+    <script>
+        function addItem() {
+            var elem = document.getElementById("list");
+            var newElem = document.createElement("p");
+            var taskElem = document.getElementById("task")
+            newElem.innerHTML = taskElem.value;
+            newElem.onclick = removeItem;
+            elem.appendChild(newElem);
+        }
+        function removeItem() {
+            var elem = document.getElementById("list");
+            elem.removeChild(this);
+        }
+    </script>
+</head>
+<body>
+    <p class="header">Список дел</p>
+    <p class="headef"> <input id="task" type="text" value="Введите задачу сюда"></p>
+    <p><input type="button" value="Добавить задачу сюда" onclick="addItem();"></p>
+    <p style="font-size:25px;" Id="list"></p>
+    <p>Если понравилось, пожалуйста, подпишись на мой канал!</p>
+    <a href="https://www.youtube.com/channel/UCVgN6KPPfLrlGnk0im_IxwA">https://www.youtube.com/channel/UCVgN6KPPfLrlGnk0im_IxwA</a>
+    <img src="https://avatars.mds.yandex.net/i?id=4e7690252a65b15f30d0e258bf8a7901-5210109-images-thumbs&n=13" width="250">
+</body>
+</html>
